@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FooBarQixToolkit
 {
-    public class FooBarQixToolkit
+    public class FooBarQix
     {
     }
 }
