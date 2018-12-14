@@ -8,5 +8,9 @@ namespace FooBarQixToolkit
 {
     public class FooBarQix
     {
+        public string Compute(string number)
+        {
+            return string.Empty;
+        }
     }
 }
