@@ -6,7 +6,6 @@ namespace FooBarQixToolkit
 {
     public class FooBarQixRuleDividers: FooBarQixAbstractRules
     {
-        #region Attributes
         private Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public Dictionary<int, string> DicDividerRules = new Dictionary<int, string>
         {
@@ -14,16 +13,12 @@ namespace FooBarQixToolkit
             [5] = "Bar",
             [7] = "Qix"
         };
-        #endregion
 
-        #region Constructor
         public FooBarQixRuleDividers()
         {
 
         }
-        #endregion
 
-        #region Methods
         /// <summary>
         /// Builds the string using the division rules.
         /// </summary>
@@ -50,6 +45,5 @@ namespace FooBarQixToolkit
             }
             return result;
         }
-        #endregion
     }
 }
