@@ -45,7 +45,7 @@ namespace FooBarQixToolkit.Tests
         [TestCase("52", "Bar")]
         public void should_return_multiple_Bar_when_input_is_divisible_by_5_and_contains_5(string number, string expected)
         {
-            var computed = string.Empty;
+            var computed = new FooBarQix(new FooBarQixOperations()).Compute(number);
             Assert.That(computed, Is.EqualTo(expected));
         }
     }
