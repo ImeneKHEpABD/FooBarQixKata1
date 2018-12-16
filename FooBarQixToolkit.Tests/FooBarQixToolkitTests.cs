@@ -31,6 +31,15 @@ namespace FooBarQixToolkit.Tests
             Assert.That(computed, Is.EqualTo(expected));
         }
 
+        [TestCase("3", "FooFoo")]
+        [TestCase("33", "FooFooFoo")]
+
+        public void should_return_multiple_Foo_when_input_contains_3_and_is_divisisble_by_3(string number, string expected)
+        {
+            var computed = string.Empty;
+            Assert.That(computed, Is.EqualTo(expected));
+        }
+
 
     }
 }
