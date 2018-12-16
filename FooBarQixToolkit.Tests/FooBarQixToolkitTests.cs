@@ -36,7 +36,7 @@ namespace FooBarQixToolkit.Tests
 
         public void should_return_multiple_Foo_when_input_contains_3_and_is_divisisble_by_3(string number, string expected)
         {
-            var computed = string.Empty;
+            var computed = new FooBarQix(new FooBarQixOperations()).Compute(number);
             Assert.That(computed, Is.EqualTo(expected));
         }
 
