@@ -16,5 +16,14 @@ namespace FooBarQixToolkit.Tests
             Assert.That(computed, Is.EqualTo(expected));
         }
 
+        [TestCase("9", "Foo")]
+        [TestCase("96", "Foo")]
+        [TestCase("24", "Foo")]
+        public void should_return_Foo_when_input_is_divisible_by_3(string number, string expected)
+        {
+            var computed = string.Empty;
+            Assert.That(computed, Is.EqualTo(expected));
+        }
+
     }
 }
