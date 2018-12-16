@@ -67,7 +67,7 @@ namespace FooBarQixToolkit.Tests
         [TestCase("10101", "FooQix**")]
         public void should_return_evaluated_String(string number, string expected)
         {
-            var computed = string.Empty;
+            var computed = new FooBarQix(new FooBarQixOperations()).Compute(number);
             Assert.That(computed, Is.EqualTo(expected));
         }
     }
