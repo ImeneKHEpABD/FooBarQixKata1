@@ -27,7 +27,7 @@ namespace FooBarQixToolkit.Tests
         [TestCase("32", "Foo")]
         public void should_return_Foo_when_input_contains_3(string number, string expected)
         {
-            var computed = string.Empty;
+            var computed = new FooBarQix(new FooBarQixOperations()).Compute(number);
             Assert.That(computed, Is.EqualTo(expected));
         }
 
