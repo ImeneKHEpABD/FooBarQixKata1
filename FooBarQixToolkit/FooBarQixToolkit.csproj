@@ -42,6 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FooBarQix.cs" />
+    <Compile Include="FooBarQixAbstractRules.cs" />
+    <Compile Include="FooBarQixOperations.cs" />
+    <Compile Include="FooBarQixRuleContains.cs" />
+    <Compile Include="FooBarQixRuleDividers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
