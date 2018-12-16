@@ -21,7 +21,7 @@ namespace FooBarQixToolkit.Tests
         [TestCase("24", "Foo")]
         public void should_return_Foo_when_input_is_divisible_by_3(string number, string expected)
         {
-            var computed = string.Empty;
+            var computed = new FooBarQix(new FooBarQixOperations()).Compute(number);
             Assert.That(computed, Is.EqualTo(expected));
         }
 
