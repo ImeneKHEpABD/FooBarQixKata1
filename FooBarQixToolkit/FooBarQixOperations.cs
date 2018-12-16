@@ -6,21 +6,16 @@ namespace FooBarQixToolkit
 {
     public class FooBarQixOperations
     {
-        #region Attributes
         private Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public FooBarQixRuleContains foobarqixrulecontains;
         public FooBarQixRuleDividers foobarqixruledividers;
-        #endregion
-
-        #region Constructor      
+    
         public FooBarQixOperations()
         {
             foobarqixrulecontains = new FooBarQixRuleContains();
             foobarqixruledividers = new FooBarQixRuleDividers();
         }
-        #endregion
 
-        #region Methods
         /// <summary>
         /// Builds the string using the division rules.
         /// </summary>
@@ -81,6 +76,5 @@ namespace FooBarQixToolkit
             }
             return result.ToString();
         }
-        #endregion
     }
 }
