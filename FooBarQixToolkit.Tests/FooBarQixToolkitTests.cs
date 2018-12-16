@@ -47,5 +47,28 @@ namespace FooBarQixToolkit.Tests
             var computed = new FooBarQix(new FooBarQixOperations()).Compute(number);
             Assert.That(computed, Is.EqualTo(expected));
         }
+
+        [TestCase("52", "Bar")]
+        [TestCase("7", "QixQix")]
+        [TestCase("77", "QixQixQix")]
+        [TestCase("28", "Qix")]
+        [TestCase("17", "Qix")]
+        [TestCase("47", "Qix")]
+        [TestCase("53", "BarFoo")]
+        [TestCase("101", "1*1")]
+        [TestCase("202", "2*2")]
+        [TestCase("802", "8*2")]
+        [TestCase("21", "FooQix")]
+        [TestCase("51", "FooBar")]
+        [TestCase("15", "FooBarBar")]
+        [TestCase("10", "Bar*")]
+        [TestCase("303", "FooFoo*Foo")]
+        [TestCase("1050", "FooBarQix*Bar*")]
+        [TestCase("10101", "FooQix**")]
+        public void should_return_evaluated_String(string number, string expected)
+        {
+            var computed = string.Empty;
+            Assert.That(computed, Is.EqualTo(expected));
+        }
     }
 }
