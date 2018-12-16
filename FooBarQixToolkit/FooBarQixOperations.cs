@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NLog;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace FooBarQixToolkit
     public class FooBarQixOperations
     {
         #region Attributes
-      
+        private Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public FooBarQixRuleContains foobarqixrulecontains;
         public FooBarQixRuleDividers foobarqixruledividers;
         #endregion
@@ -44,12 +45,12 @@ namespace FooBarQixToolkit
                 }
                 else
                 {
-                    
+                    logger.Error($"The input value [{parsedNumber}] is not a valid number");
                 }
             }
             catch (Exception ex)
             {
-                
+                logger.Error("EvaluateRules Error: " + ex.Message);
             }
             return result;
         }
@@ -79,7 +80,7 @@ namespace FooBarQixToolkit
             }
             catch (Exception ex)
             {
-                
+                logger.Error("BuildStringByContainsRules Error: " + ex.Message);
             }
             return result.ToString();
         }

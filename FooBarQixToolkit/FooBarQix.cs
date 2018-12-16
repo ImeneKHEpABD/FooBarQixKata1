@@ -1,18 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using NLog;
 
 namespace FooBarQixToolkit
 {
     public class FooBarQix
     {
+        private static Logger logger;
         private FooBarQixOperations foobarqixoperations;
 
         public FooBarQix(FooBarQixOperations opM)
         {
-            
+            logger = LogManager.GetCurrentClassLogger();
+            logger.Info("Initialize FooBarQix Toolkit");
             foobarqixoperations = opM;
         }
 
@@ -29,10 +28,9 @@ namespace FooBarQixToolkit
             }
             catch (Exception ex)
             {
-                
+                logger.Error("An error occurred in the Compute method: " + ex.Message);
                 return string.Empty;
             }
-
         }
     }
 }

@@ -1,15 +1,13 @@
-﻿using System;
+﻿using NLog;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FooBarQixToolkit
 {
     public class FooBarQixRuleContains: FooBarQixAbstractRules
     {
         #region Attributes
-        
+        private static Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public Dictionary<int, string> DicContainsRules = new Dictionary<int, string>
         {
             [3] = "Foo",
@@ -18,6 +16,7 @@ namespace FooBarQixToolkit
             [0] = "*"
         };
         #endregion
+
         #region Constructor
         public FooBarQixRuleContains()
         {
@@ -42,7 +41,7 @@ namespace FooBarQixToolkit
             }
             catch (Exception ex)
             {
-               
+                logger.Error("BuildStringByDigitsContains Error: " + ex.Message);
             }
             return result;
 

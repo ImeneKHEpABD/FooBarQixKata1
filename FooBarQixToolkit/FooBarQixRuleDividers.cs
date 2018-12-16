@@ -1,15 +1,13 @@
-﻿using System;
+﻿using NLog;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FooBarQixToolkit
 {
     public class FooBarQixRuleDividers: FooBarQixAbstractRules
     {
         #region Attributes
-    
+        private Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public Dictionary<int, string> DicDividerRules = new Dictionary<int, string>
         {
             [3] = "Foo",
@@ -47,7 +45,7 @@ namespace FooBarQixToolkit
                 }
                 catch (Exception ex)
                 {
-                    
+                    logger.Error("BuildStringByDividerRule Error: " + ex.Message);
                 }
             }
             return result;
